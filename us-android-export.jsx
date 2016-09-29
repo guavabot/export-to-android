@@ -6,6 +6,15 @@
  * Author: Gaston Figueroa (Uncorked Studios)
  * Site: uncorkedstudios.com
  * Licensed under the MIT license
+ * https://uncorkedstudios.com/blog/export-to-android-photoshop-script
+ * 
+ * Version: 1.1.0
+ * Ivan Soriano
+ * Sep 29 2016
+ * - Base resolution is 2x instead of 3x
+ * - If you select a layer group, it will export all layers individually
+ * - Prompt for a filename prefix. By default "ic_"
+ * - Lowercase and replace - by _
  */
 
 
@@ -165,7 +174,7 @@ function saveFunc(resolution) {
 		docFolder.create();
 	}
 
-	alert(docFolder);
+	// alert(docFolder);
 
 	var saveFile = File(docFolder + "/" + file_prefix + tempDocName + ".png");
 
