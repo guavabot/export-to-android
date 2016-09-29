@@ -37,6 +37,8 @@ var docRef = app.activeDocument,
 		}
 	};
 
+var file_prefix = prompt("File prefix","ic_","Input file prefix");
+
 
 // Initialize
 init();
@@ -156,7 +158,7 @@ function saveFunc(resolution) {
 
 	alert(docFolder);
 
-	var saveFile = File(docFolder + "/" + tempDocName + ".png");
+	var saveFile = File(docFolder + "/" + file_prefix + tempDocName + ".png");
 
 	var sfwOptions = new ExportOptionsSaveForWeb(); 
 	sfwOptions.format = SaveDocumentType.PNG; 
