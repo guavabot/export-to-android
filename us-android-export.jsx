@@ -17,23 +17,23 @@ var docRef = app.activeDocument,
 	docPath = docRef.path,	
 	resolutionsObj = {
 		xxxhdpi : {
-			density : 1
+			density : 2
 		},
 
 		xxhdpi : {
-			density : 0.75
+			density : 1.5
 		},
 
 		xhdpi : {
-			density : 0.5
+			density : 1
 		},
 
 		hdpi : {
-			density : 0.375
+			density : 0.750 
 		},
 
 		mdpi : {
-			density : 0.25
+			density : 0.5
 		}
 	};
 
