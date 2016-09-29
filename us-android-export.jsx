@@ -53,7 +53,16 @@ function init() {
     
 	if(!isDocumentNew()) {
 		for(resolution in resolutionsObj) {
-			saveFunc(resolution);
+			if (activeLayer.typename == "LayerSet") {
+				var actLayer = activeLayer;
+				for (var jj = 0, jL = actLayer.layers.length; jj < jL; jj++) {
+					activeLayer = actLayer.layers[jj];
+					saveFunc(resolution);
+				}
+				activeLayer = actLayer;
+			} else {
+				saveFunc(resolution);
+			}
 		}
 	} else {
 		alert("Please save your document before running this script.");
