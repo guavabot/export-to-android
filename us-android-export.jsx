@@ -149,7 +149,7 @@ function saveFunc(resolution) {
 	
 	resizeDoc(tempDoc, resolution);
 
-	var tempDocName = tempDoc.name.replace(/\.[^\.]+$/, ''),
+	var tempDocName = tempDoc.name.replace(/-/, '_').replace(/\.[^\.]+$/, '').toLowerCase(),
 		docFolder = Folder(docPath + '/' + docName + '-assets/' + 'drawable-' + resolution);
 
 	if(!docFolder.exists) {
